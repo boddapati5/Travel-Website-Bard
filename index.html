@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust Travels</title>
+  <style>
+    /* Base Styles */
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      color: #333;
+      background-color: #f1f1f1;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #f1f1f1;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: fadeInDown 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #333;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle i {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-toggle.active i {
+      transform: rotate(90deg);
+    }
+
+    .theme-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    .theme-toggle i {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    /* Search Bar Styles */
+    .search-bar {
+      display: flex;
+      margin-top: 1rem;
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .search-input {
+      padding: 1rem;
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    .search-input:focus {
+      border-color: #333;
+    }
+
+    .search-btn {
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .search-btn:hover {
+      background-color: #222;
+    }
+
+    /* Responsive Navigation Styles */
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        padding: 1rem;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav
