@@ -4,146 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wanderlust Travels</title>
-  <style>
-    /* Base Styles */
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      color: #333;
-      background-color: #f1f1f1;
-      transition: background-color 0.3s ease-in-out;
-    }
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="dark-theme">
+    <div class="logo">Wanderlust Travels</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#tours">Tours</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="toggle-theme">Dark Mode</a>
+    </nav>
+  </header>
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
+  <main>
+    <section class="hero">
+      <img src="images/banner.jpg" alt="Travel Banner">
+      <div class="hero-text">
+        <h2>Explore the World</h2>
+        <p>Unforgettable travel experiences await you.</p>
+        <a href="#">Book Now</a>
+      </div>
+    </section>
 
-    /* Header Styles */
-    header {
-      background-color: #f1f1f1;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      animation: fadeInDown 0.5s ease-in-out forwards;
-    }
+    <section class="destinations" id="destinations">
+      <h2>Explore Our Destinations</h2>
+      <div class="destination-card">
+        <img src="images/destination1.jpg" alt="Destination 1">
+        <h3>Paris, France</h3>
+        <p>The City of Lights awaits with its iconic landmarks, romantic atmosphere, and rich culture.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination2.jpg" alt="Destination 2">
+        <h3>Bali, Indonesia</h3>
+        <p>Experience the beauty of beaches, temples, and lush rice terraces in paradise.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination3.jpg" alt="Destination 3">
+        <h3>Rome, Italy</h3>
+        <p>Explore the historical sites, art treasures, and vibrant culture of the Eternal City.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </section>
 
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    <section class="tours" id="tours">
+      <h2>Popular Tours</h2>
+      <p>(Placeholder - Replace with actual tour descriptions and booking functionality)</p>
+      <p>We offer a variety of exciting tours to suit different interests and budgets. From adventure getaways to cultural immersions, we have something for everyone.</p>
+    </section>
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+    <section class="testimonials" id="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial">
+        <p>"Wanderlust Travels helped me plan my dream vacation to Greece. Everything was perfectly organized, and I had an amazing time!"</p>
+        <span>- John Smith</span>
+      </div>
+      <div class="testimonial">
+        <p>"The tour guides were knowledgeable and friendly, and the destinations were breathtaking. I highly recommend Wanderlust Travels!"</p>
+        <span>- Jane Doe</span>
+      </div>
+    </section>
 
-    .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>Wanderlust Travels is a passionate travel agency dedicated to creating unforgettable travel experiences for our customers. We offer a wide range of tours and destinations to suit all interests and budgets.</p>
+      <p>Our team of experienced travel professionals is here to help you plan your dream vacation. We take care of all the details, so you can relax and enjoy your trip.</p>
+    </section>
 
-    .nav-links li {
-      display: inline-block;
-      margin-right: 2rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: inherit;
-      transition: color 0.3s ease-in-out;
-    }
-
-    .nav-links a:hover {
-      color: #333;
-    }
-
-    .menu-toggle {
-      display: none;
-      cursor: pointer;
-    }
-
-    .menu-toggle i {
-      font-size: 1.5rem;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .menu-toggle.active i {
-      transform: rotate(90deg);
-    }
-
-    .theme-toggle {
-      display: none;
-      cursor: pointer;
-    }
-
-    .theme-toggle i {
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    /* Search Bar Styles */
-    .search-bar {
-      display: flex;
-      margin-top: 1rem;
-      animation: fadeIn 0.5s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    .search-input {
-      padding: 1rem;
-      flex: 1;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      transition: border-color 0.3s ease-in-out;
-    }
-
-    .search-input:focus {
-      border-color: #333;
-    }
-
-    .search-btn {
-      padding: 1rem;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .search-btn:hover {
-      background-color: #222;
-    }
-
-    /* Responsive Navigation Styles */
-    @media screen and (max-width: 768px) {
-      .nav-links {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #f1f1f1;
-        padding: 1rem;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .nav
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        <button type="submit">Send Inquiry</button>
+      </form>
+      <p><b>Address
